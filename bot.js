@@ -8,22 +8,15 @@ const client = new Discord.Client();
 const prefix = "n!";
 
 
-if (message.content.indexOf(prefix) !== 0) return;
+ const prefix = "n!";
+  client.on("message", (message) => {
+    // Exit and stop if it's not there
+   
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
+    
+    if (message.content.startsWith(prefix + "ping")) {
+      message.channel.send("pong!");
 
-const command = args.shift().toLowerCase();
-
-client.on("message", (message) => {
-  // Exit and stop if it's not there
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
-  
-  if(command === 'ping') {
-  message.channel.send('Pong!');
-  }
-  if (command === 'blah') {
-  message.channel.send('Meh.');
-  }
-});
-
-  
+  )};
 
 client.login(process.env.BOT_TOKEN);
