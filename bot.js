@@ -14,12 +14,12 @@ client.on("message", (message) => {
   // Exit and stop if it's not there
   if (!message.content.startsWith(prefix) || message.author.bot) return;
   
-  if (message.content.startsWith(prefix + "ping")) {
-    message.channel.send("pong!");
+  if(command === 'ping') {
+  message.channel.send('Pong!');
   } else
-  if (message.content.startsWith(prefix + "foo")) {
-    message.channel.send("bar!");
-  }
+  if (command === 'blah') {
+  message.channel.send('Meh.');
+}
 });
 
   
