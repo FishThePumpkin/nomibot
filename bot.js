@@ -15,6 +15,6 @@ const prefix = "n!";
     if (message.content.startsWith(prefix + "ping")) {
       message.channel.send("pong!");
 
-  )};
+    });
 
 client.login(process.env.BOT_TOKEN);
