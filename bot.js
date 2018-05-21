@@ -1,5 +1,9 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const ownerID = "246437474463776769"
+//commands preparation
+const args = message.content.slice(prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
 
 // Set the prefix
 let prefix = "!";
@@ -9,14 +13,13 @@ client.on("message", (message) => {
     
   if (!message.content.startsWith(prefix) || message.author.bot) return;
     
-  if (message.content.startsWith(prefix + "ping")) {
-      
-    message.channel.send("pong!");
-      
+  if(command === 'ping') {
+    message.channel.send('Pong!');
   } else
-  if (message.content.startsWith(prefix + "foo")) {
-    message.channel.send("bar!");
+  if (command === 'blah') {
+    message.channel.send('Meh.');
   }
+  
 });
 
   
