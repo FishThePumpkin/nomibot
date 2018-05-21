@@ -5,7 +5,7 @@ const client = new Discord.Client();
 
 
 // Set the prefix
-const prefix = "!";
+const prefix = "n!";
 client.on("message", (message) => {
   // Exit and stop if it's not there
   if (!message.content.startsWith(prefix)) return;
