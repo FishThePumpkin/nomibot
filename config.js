@@ -1,3 +1,3 @@
 exports.TOKEN = ' ';
 
-exports.PREFIX = 'gusion';
+exports.PREFIX = '!';
