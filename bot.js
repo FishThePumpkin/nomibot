@@ -8,7 +8,6 @@ const config = require("./config.json");
 client.on("message", (message) => {
   // Exit and stop if the prefix is not there or if user is a bot
     
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
     
   if(command === 'ping') {
     message.channel.send('Pong!');
