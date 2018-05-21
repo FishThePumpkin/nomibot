@@ -1,13 +1,9 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const ownerID = "246437474463776769";
+const config = require("./config.json");
+
 //commands preparation
 
-const args = message.content.slice(prefix.length).trim().split(/ +/g);
-const command = args.shift().toLowerCase();
-
-// Set the prefix
-let prefix = "!";
 
 client.on("message", (message) => {
   // Exit and stop if the prefix is not there or if user is a bot
