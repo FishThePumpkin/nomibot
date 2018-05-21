@@ -5,17 +5,18 @@ const config = require("./config.json");
 //commands preparation
 
 
+// Set the prefix
+const prefix = "!";
 client.on("message", (message) => {
-  // Exit and stop if the prefix is not there or if user is a bot
-    
-    
-  if(command === 'ping') {
-    message.channel.send('Pong!');
-  } else
-  if (command === 'blah') {
-    message.channel.send('Meh.');
-  }
+  // Exit and stop if it's not there
+  if (!message.content.startsWith(prefix)) return;
   
+  if (message.content.startsWith(prefix + "ping")) {
+    message.channel.send("pong!");
+  } else
+  if (message.content.startsWith(prefix + "foo")) {
+    message.channel.send("bar!");
+  }
 });
 
   
