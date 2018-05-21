@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const ownerID = "246437474463776769"
+const ownerID = "246437474463776769";
 //commands preparation
 
 const args = message.content.slice(prefix.length).trim().split(/ +/g);
