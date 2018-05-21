@@ -8,9 +8,8 @@ const client = new Discord.Client();
 const prefix = "n!";
 
 
-if (message.content.indexOf(config.prefix) !== 0) return;
+if (message.content.indexOf(prefix) !== 0) return;
 
-const args = message.content.slice(prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 
 client.on("message", (message) => {
@@ -19,10 +18,10 @@ client.on("message", (message) => {
   
   if(command === 'ping') {
   message.channel.send('Pong!');
-  } else
+  }
   if (command === 'blah') {
   message.channel.send('Meh.');
-}
+  }
 });
 
   
